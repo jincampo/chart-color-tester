@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendo Chart Color Palette Tester</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pendo-app">
+        <!-- Main Layout with Sidebar and Content -->
+        <div class="main-layout">
+            <!-- Side Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <i data-lucide="menu" class="hamburger"></i>
+                        <img src="Pendo logo.png" class="logo">
+                    </div>
+                    <button class="create-btn">
+                        <span class="plus-icon">+</span>
+                        Create
+                    </button>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-item">
+                            <i data-lucide="home" class="nav-icon"></i>
+                            <span class="nav-label">Home</span>
+                        </div>
+                        <div class="nav-item active">
+                            <i data-lucide="layout-dashboard" class="nav-icon"></i>
+                            <span class="nav-label">Dashboards</span>
+                        </div>
+                        <div class="nav-item">
+                            <i data-lucide="search" class="nav-icon"></i>
+                            <span class="nav-label">Jump to page</span>
+                            <span class="nav-shortcut">⌘+K</span>
+                        </div>
+                        <div class="nav-item">
+                            <i data-lucide="clock" class="nav-icon"></i>
+                            <span class="nav-label">Recents</span>
+                        </div>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">ANALYZE</div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="package" class="nav-icon"></i>
+                            <span class="nav-label">Product</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="users" class="nav-icon"></i>
+                            <span class="nav-label">People</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="bar-chart-3" class="nav-icon"></i>
+                            <span class="nav-label">Analytics</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="play" class="nav-icon"></i>
+                            <span class="nav-label">Replay</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="headphones" class="nav-icon"></i>
+                            <span class="nav-label">Listen</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item">
+                            <i data-lucide="heart" class="nav-icon"></i>
+                            <span class="nav-label">Sentiment</span>
+                        </div>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">ACT</div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="book-open" class="nav-icon"></i>
+                            <span class="nav-label">Guides</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item expandable">
+                            <i data-lucide="zap" class="nav-icon"></i>
+                            <span class="nav-label">Orchestrate</span>
+                            <i data-lucide="chevron-down" class="nav-chevron"></i>
+                        </div>
+                        <div class="nav-item">
+                            <i data-lucide="map" class="nav-icon"></i>
+                            <span class="nav-label">Roadmaps</span>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Top Navigation Bar -->
+                <header class="top-nav">
+                    <div class="top-nav-left">
+                        <button class="back-btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+                    </div>
+                    <div class="top-nav-center">
+                        <div class="subscription-selector">
+                            <span>acme-co-subscription</span>
+                            <i data-lucide="chevron-down" class="chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="top-nav-right">
+                        <div class="nav-icons">
+                            <button class="nav-icon">
+                                <i data-lucide="settings"></i>
+                            </button>
+                            <button class="nav-icon">
+                                <i data-lucide="help-circle"></i>
+                            </button>
+                            <button class="nav-icon">
+                                <i data-lucide="bell"></i>
+                            </button>
+                        </div>
+                        <div class="user-avatar">K</div>
+                    </div>
+                </header>
+
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Chart Color Palette Tester</h1>
+                    </div>
+                    <div class="page-actions">
+                        <div class="palette-selector">
+                            <select id="paletteDropdown" class="palette-dropdown">
+                                <option value="default">Default Pendo</option>
+                                <option value="new-proposal-1">New proposal 1</option>
+                                <option value="new-proposal-2">New proposal 2</option>
+                                <option value="mollys">Molly's</option>
+                            </select>
+                        </div>
+                        <div class="items-selector">
+                            <select id="itemsDropdown" class="palette-dropdown">
+                                <option value="1">1 color</option>
+                                <option value="2">2 colors</option>
+                                <option value="3" selected>3 colors</option>
+                                <option value="4">4 colors</option>
+                                <option value="5">5 colors</option>
+                                <option value="6">6 colors</option>
+                                <option value="7">7 colors</option>
+                                <option value="8">8 colors</option>
+                                <option value="9">9 colors</option>
+                                <option value="10">10 colors</option>
+                            </select>
+                        </div>
+                        <button id="helpBtn" class="btn-secondary">Help</button>
+                    </div>
+                </div>
+
+                <div class="page-content">
+
+
+
+        <!-- Chart Testing Grid -->
+        <section class="charts-section">
+            <div class="section-header">
+                <h2>Chart Type Tests</h2>
+                <p>Live preview of how your color palette looks across different chart types</p>
+                <div class="chart-controls">
+                    <label>
+                        <input type="checkbox" id="showHoverEffect" checked> Show hover effects
+                    </label>
+                    <label>
+                        <input type="checkbox" id="enableAnimation" checked> Enable animations
+                    </label>
+                </div>
+            </div>
+            
+            <div class="chart-category">
+                <h3>Standard Charts (Primary Colors)</h3>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Line Chart</h4>
+                            <span class="chart-info">Time series data</span>
+                        </div>
+                        <div id="lineChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Column Chart</h4>
+                            <span class="chart-info">Categorical data</span>
+                        </div>
+                        <div id="barChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Pie Chart</h4>
+                            <span class="chart-info">Part-to-whole relationships</span>
+                        </div>
+                        <div id="pieChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Area Chart</h4>
+                            <span class="chart-info">Stacked metrics over time</span>
+                        </div>
+                        <div id="areaChart" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-category">
+                <h3>Data Explorer Style (Light Colors)</h3>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Light Column Chart</h4>
+                            <span class="chart-info">Data Explorer column style</span>
+                        </div>
+                        <div id="lightChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Mixed Chart Types</h4>
+                            <span class="chart-info">Combined visualizations</span>
+                        </div>
+                        <div id="mixedChart" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-category">
+                <h3>Specialized Chart Styles</h3>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Goal Chart Style</h4>
+                            <span class="chart-info">Baseline, target, actual</span>
+                        </div>
+                        <div id="goalChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>People DWM Style</h4>
+                            <span class="chart-info">Daily/Weekly/Monthly users</span>
+                        </div>
+                        <div id="peopleDWMChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>PES Style Chart</h4>
+                            <span class="chart-info">Product Engagement Score</span>
+                        </div>
+                        <div id="pesChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>User Frequency Style</h4>
+                            <span class="chart-info">Stacked percentage chart</span>
+                        </div>
+                        <div id="userFrequencyChart" class="chart"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Funnel Chart</h4>
+                            <span class="chart-info">Step-based conversion funnel</span>
+                        </div>
+                        <div id="funnelChart" class="chart">
+                            <div class="funnel-container">
+                                <!-- Y-Axis -->
+                                <div class="funnel-axis">
+                                    <span>100%</span>
+                                    <span>75%</span>
+                                    <span>50%</span>
+                                    <span>25%</span>
+                                    <span>0%</span>
+                                </div>
+                                
+                                <!-- Funnel Chart -->
+                                <div class="funnel-chart-graph">
+                                    <div class="funnel-chart">
+                                        <div class="funnel-view" id="funnelSteps">
+                                            <!-- Steps will be dynamically generated -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+                </div>
+            </main>
+        </div>
+
+        <!-- Help Modal -->
+        <div id="helpModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Chart Color Tester Help</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4>How to Use:</h4>
+                    <ol>
+                        <li><strong>Select Palette:</strong> Use the dropdown in the page header to switch between color palettes</li>
+                        <li><strong>Test Charts:</strong> See real-time updates across all chart types</li>
+                        <li><strong>View Funnel:</strong> Check how colors work in the specialized funnel chart</li>
+                    </ol>
+                    
+                    <h4>Color Palettes:</h4>
+                    <ul>
+                        <li><strong>Default Pendo:</strong> Original Pendo color scheme</li>
+                        <li><strong>Custom Palette:</strong> Alternative color set</li>
+                        <li><strong>Molly's:</strong> Specialized purple-based palette</li>
+                    </ul>
+                    
+                    <h4>Tips:</h4>
+                    <ul>
+                        <li>Switch between palettes to see how different colors affect chart readability</li>
+                        <li>Pay attention to the funnel chart's hover and interaction states</li>
+                        <li>Consider contrast and accessibility when evaluating color choices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
