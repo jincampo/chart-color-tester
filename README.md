@@ -48,6 +48,12 @@ A comprehensive tool for testing and previewing color palettes across different 
 - Custom palette with specific design requirements
 - Purple-based color scheme with high contrast options
 
+### Warm-Cool Contrast
+- Balanced warm and cool color temperature palette
+- High contrast colors designed for accessibility
+- Strategic mix of navy blues, golden yellows, purples, oranges, and greens
+- Includes neutral gray as contrast anchor
+
 ## Technical Details
 
 - **Framework**: Vanilla JavaScript with Highcharts.js
