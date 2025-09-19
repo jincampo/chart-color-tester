@@ -56,7 +56,7 @@ class ChartColorTester {
                 }
             },
             'soft-pastels': {
-                standard: ['#74D6BE', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
+                standard: ['#5EA870', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
                 light: ['#B1E8D6', '#B1B4E8', '#E8E8B1', '#D1B1E8', '#B1E8C0', '#E8B1C4', '#B1D1E8', '#E8C4B1', '#CCE8B1', '#E8B1DF'],
                 funnel: {
                     continued: ['#74D6BE', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
