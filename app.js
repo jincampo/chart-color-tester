@@ -54,6 +54,26 @@ class ChartColorTester {
                     hover: ['#073A63', '#CC5B6E', '#428CCC', '#C04800', '#00884E', '#2800B2', '#CC3A5E', '#5D1CE5', '#BC9542', '#5C5C5C'],
                     selected: ['#052A4A', '#994452', '#316999', '#903600', '#006639', '#1E0089', '#99293E', '#461AB8', '#8F7031', '#414141']
                 }
+            },
+            'soft-pastels': {
+                standard: ['#74D6BE', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
+                light: ['#B1E8D6', '#B1B4E8', '#E8E8B1', '#D1B1E8', '#B1E8C0', '#E8B1C4', '#B1D1E8', '#E8C4B1', '#CCE8B1', '#E8B1DF'],
+                funnel: {
+                    continued: ['#74D6BE', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
+                    dropped: ['#B1E8D6', '#B1B4E8', '#E8E8B1', '#D1B1E8', '#B1E8C0', '#E8B1C4', '#B1D1E8', '#E8C4B1', '#CCE8B1', '#E8B1DF'],
+                    hover: ['#5CAAA0', '#5C60AA', '#AAAA5C', '#8A5CAA', '#5CAA6B', '#AA5C73', '#5C93AA', '#AA795C', '#82AA5C', '#AA5CA4'],
+                    selected: ['#457E7B', '#444684', '#7E7E44', '#674584', '#457E50', '#7E4456', '#446E7E', '#7E5944', '#617E44', '#7E447A']
+                }
+            },
+            'modern-vibrant': {
+                standard: ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3', '#FF6692', '#B6E880', '#FF97FF', '#FECB52'],
+                light: ['#A5AFFC', '#F59B8A', '#66E0BE', '#D1A5FC', '#FFC49F', '#7DE3F8', '#FFA5BE', '#D9F2B3', '#FFB3FF', '#FEE0A1'],
+                funnel: {
+                    continued: ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3', '#FF6692', '#B6E880', '#FF97FF', '#FECB52'],
+                    dropped: ['#A5AFFC', '#F59B8A', '#66E0BE', '#D1A5FC', '#FFC49F', '#7DE3F8', '#FFA5BE', '#D9F2B3', '#FFB3FF', '#FEE0A1'],
+                    hover: ['#4A58C8', '#BF442F', '#00A378', '#8950C8', '#CC8148', '#14A9C2', '#CC5274', '#93BA66', '#CC78CC', '#CB9F42'],
+                    selected: ['#384496', '#96331F', '#007A5A', '#673C96', '#996136', '#0F7F91', '#993D56', '#6E8C4C', '#995999', '#987731']
+                }
             }
         };
 
