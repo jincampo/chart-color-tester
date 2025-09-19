@@ -18,7 +18,9 @@ class ChartColorTester {
         this.presets = {
             default: {
                 standard: ['#2C8AA8', '#FF4876', '#00AA62', '#6A6C75', '#EFBE53', '#9B59B6', '#E67E22', '#1ABC9C', '#3498DB', '#F39C12'],
+                standardDark: ['#3FA3C7', '#FF6B8F', '#1FBB7B', '#808289', '#F2C76C', '#B470D1', '#F2913B', '#2FD1B5', '#5BB1F2', '#F5AC2B'],
                 light: ['#A8D8EA', '#FFB3C6', '#B3E5D1', '#D4D6DD', '#F7E7A3', '#D7BDE2', '#F8C471', '#A3E4D7', '#AED6F1', '#F8C471'],
+                lightDark: ['#1B5A6B', '#8B2429', '#006640', '#444549', '#A07B35', '#63407A', '#9B4E15', '#119A7C', '#2373A3', '#A0670A'],
                 funnel: {
                     continued: ['#8852DC', '#982595', '#4AB0D0', '#417D4D', '#F59929', '#4570E0', '#D77A0A', '#CA58C7', '#7494E8', '#6825D1'],
                     dropped: ['#CFB5F9', '#E192E0', '#8AD4EC', '#80BD8D', '#FFDDB3', '#7494E8', '#FBB866', '#F3CDF2', '#A2B7F0', '#A77AF0'],
@@ -27,18 +29,22 @@ class ChartColorTester {
                 }
             },
             'bright-blues-pinks': {
-                standard: ['#FF4876', '#0072B2', '#87A96B', '#332288', '#56B4E9', '#117733', '#CC79A7', '#88CCEE', '#AA4499'],
-                light: ['#FFB5C5', '#AAD4F4', '#66B5E6', '#7FBB7F', '#BBE2F7', '#7F7FBB', '#CC99BB', '#99BBE6', '#E6BBD1'],
+                standard: ['#FF4876', '#0072B2', '#87A96B', '#332288', '#56B4E9', '#117733', '#CC79A7', '#88CCEE', '#AA4499', '#E69F00'],
+                standardDark: ['#FF6B8F', '#1F8FCF', '#9FBB84', '#4A3FA5', '#73C8F6', '#2E9450', '#DFA4C4', '#A5E1FB', '#C166B6', '#F2B233'],
+                light: ['#FFB5C5', '#AAD4F4', '#66B5E6', '#7FBB7F', '#BBE2F7', '#7F7FBB', '#CC99BB', '#99BBE6', '#E6BBD1', '#F5C866'],
+                lightDark: ['#8B2429', '#004F7A', '#5A7047', '#221A5A', '#3A7BA3', '#0D4F26', '#8A5277', '#5A99B3', '#704D6B', '#B8750A'],
                 funnel: {
-                    continued: ['#FF4876', '#56B4E9', '#0072B2', '#117733', '#88CCEE', '#332288', '#AA4499', '#6699CC', '#CC79A7'],
-                    dropped: ['#FFB5C5', '#AAD4F4', '#66B5E6', '#7FBB7F', '#BBE2F7', '#7F7FBB', '#CC99BB', '#99BBE6', '#E6BBD1'],
-                    hover: ['#CC3A5E', '#4591BA', '#005B8F', '#0E5F2A', '#6BA3BB', '#28226B', '#88377A', '#527A9F', '#A35F85'],
-                    selected: ['#992D46', '#346E8B', '#00446C', '#0A4720', '#4F7A8C', '#1E1B50', '#66295B', '#3E5C77', '#7A4863']
+                    continued: ['#FF4876', '#56B4E9', '#0072B2', '#117733', '#88CCEE', '#332288', '#AA4499', '#6699CC', '#CC79A7', '#E69F00'],
+                    dropped: ['#FFB5C5', '#AAD4F4', '#66B5E6', '#7FBB7F', '#BBE2F7', '#7F7FBB', '#CC99BB', '#99BBE6', '#E6BBD1', '#F5C866'],
+                    hover: ['#CC3A5E', '#4591BA', '#005B8F', '#0E5F2A', '#6BA3BB', '#28226B', '#88377A', '#527A9F', '#A35F85', '#B8750A'],
+                    selected: ['#992D46', '#346E8B', '#00446C', '#0A4720', '#4F7A8C', '#1E1B50', '#66295B', '#3E5C77', '#7A4863', '#8A5907']
                 }
             },
             'vibrant-purples': {
                 standard: ['#8852DC', '#982595', '#4AB0D0', '#417D4D', '#F59929', '#4570E0', '#D77A0A', '#CA58C7', '#7494E8', '#6825D1'],
+                standardDark: ['#A56FF9', '#B542B2', '#67CDDD', '#5E9A6A', '#F8B246', '#6D8DF7', '#F49727', '#E775E4', '#91B1F5', '#8542EE'],
                 light: ['#C3A6F1', '#D1A2D5', '#A5D8EC', '#90C09D', '#FDD08A', '#A2B8F0', '#F1B866', '#E8A6E3', '#B4CAF4', '#B089E8'],
+                lightDark: ['#5A35A3', '#651B63', '#32789F', '#2C5938', '#B0671C', '#2F4FA7', '#9E5808', '#905195', '#5071B5', '#4B1B9E'],
                 funnel: {
                     continued: ['#8852DC', '#982595', '#4AB0D0', '#417D4D', '#F59929', '#4570E0', '#D77A0A', '#CA58C7', '#7494E8', '#6825D1'],
                     dropped: ['#C3A6F1', '#D1A2D5', '#A5D8EC', '#90C09D', '#FDD08A', '#A2B8F0', '#F1B866', '#E8A6E3', '#B4CAF4', '#B089E8'],
@@ -48,7 +54,9 @@ class ChartColorTester {
             },
             'navy-bright-spectrum': {
                 standard: ['#094B7C', '#FF728A', '#53AFFF', '#F05B00', '#00AA62', '#3300B2', '#FF4876', '#7423E2', '#E6AF2D', '#777777'],
+                standardDark: ['#2668A1', '#FF8FA7', '#70C2FF', '#FF7E33', '#33C585', '#5533CF', '#FF6B8F', '#9140FF', '#F2C250', '#949494'],
                 light: ['#7BA5C7', '#FFB5C5', '#A8D1FF', '#FF9F66', '#66C591', '#8866D4', '#FFB5C5', '#B388F0', '#F5D18A', '#BBBBBB'],
+                lightDark: ['#073A63', '#8B4D59', '#3E7FBF', '#B04000', '#006640', '#2200789', '#8B2429', '#5B1CAF', '#A0781F', '#525252'],
                 funnel: {
                     continued: ['#094B7C', '#FF728A', '#53AFFF', '#F05B00', '#00AA62', '#3300B2', '#FF4876', '#7423E2', '#E6AF2D', '#777777'],
                     dropped: ['#7BA5C7', '#FFB5C5', '#A8D1FF', '#FF9F66', '#66C591', '#8866D4', '#FFB5C5', '#B388F0', '#F5D18A', '#BBBBBB'],
@@ -58,7 +66,9 @@ class ChartColorTester {
             },
             'soft-pastels': {
                 standard: ['#5EA870', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
+                standardDark: ['#7BC18D', '#919CF3', '#F3F391', '#C791F3', '#91F3A0', '#F391AA', '#91D1F3', '#F3B391', '#BDF391', '#F391E5'],
                 light: ['#B1E8D6', '#B1B4E8', '#E8E8B1', '#D1B1E8', '#B1E8C0', '#E8B1C4', '#B1D1E8', '#E8C4B1', '#CCE8B1', '#E8B1DF'],
+                lightDark: ['#4A8760', '#5A62A6', '#A6A65A', '#7A5AA6', '#5AA673', '#A65A7A', '#5A8AA6', '#A6795A', '#7AA65A', '#A65A94'],
                 funnel: {
                     continued: ['#74D6BE', '#7479D6', '#D6D174', '#AA74D6', '#74D683', '#D6748D', '#74B4D6', '#D69674', '#A0D674', '#D674C8'],
                     dropped: ['#B1E8D6', '#B1B4E8', '#E8E8B1', '#D1B1E8', '#B1E8C0', '#E8B1C4', '#B1D1E8', '#E8C4B1', '#CCE8B1', '#E8B1DF'],
@@ -68,12 +78,62 @@ class ChartColorTester {
             },
             'modern-vibrant': {
                 standard: ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3', '#FF6692', '#B6E880', '#FF97FF', '#FECB52'],
+                standardDark: ['#808BFF', '#FF7258', '#1FE0B3', '#C880FF', '#FFB877', '#36E0F6', '#FF83AF', '#D3F59D', '#FFB4FF', '#FFD86F'],
                 light: ['#A5AFFC', '#F59B8A', '#66E0BE', '#D1A5FC', '#FFC49F', '#7DE3F8', '#FFA5BE', '#D9F2B3', '#FFB3FF', '#FEE0A1'],
+                lightDark: ['#4A58C8', '#BF442F', '#00A378', '#8950C8', '#CC8148', '#14A9C2', '#CC5274', '#93BA66', '#CC78CC', '#CB9F42'],
                 funnel: {
                     continued: ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3', '#FF6692', '#B6E880', '#FF97FF', '#FECB52'],
                     dropped: ['#A5AFFC', '#F59B8A', '#66E0BE', '#D1A5FC', '#FFC49F', '#7DE3F8', '#FFA5BE', '#D9F2B3', '#FFB3FF', '#FEE0A1'],
                     hover: ['#4A58C8', '#BF442F', '#00A378', '#8950C8', '#CC8148', '#14A9C2', '#CC5274', '#93BA66', '#CC78CC', '#CB9F42'],
                     selected: ['#384496', '#96331F', '#007A5A', '#673C96', '#996136', '#0F7F91', '#993D56', '#6E8C4C', '#995999', '#987731']
+                }
+            },
+            'violet-sage-spectrum': {
+                standard: ['#8852DC', '#87A96B', '#0072B2', '#332288', '#FF4876', '#E69F00', '#128297', '#56B4E9', '#CC79A7', '#AA4499'],
+                standardDark: ['#A56FF9', '#A4C088', '#1F8FCF', '#4A3FA5', '#FF6B8F', '#F2B233', '#2FA0B4', '#73C8F6', '#E196C4', '#C166B6'],
+                light: ['#C3A6F1', '#B8CBA0', '#66B5E6', '#7F7FBB', '#FFB5C5', '#F5C866', '#7BC1CC', '#AAD4F4', '#E8B1C4', '#E6BBD1'],
+                lightDark: ['#5A35A3', '#5A7047', '#004F7A', '#221A5A', '#8B2429', '#B8750A', '#0E5A68', '#3A7BA3', '#8A5277', '#704D6B'],
+                funnel: {
+                    continued: ['#8852DC', '#87A96B', '#0072B2', '#332288', '#FF4876', '#E69F00', '#128297', '#56B4E9', '#CC79A7', '#AA4499'],
+                    dropped: ['#C3A6F1', '#B8CBA0', '#66B5E6', '#7F7FBB', '#FFB5C5', '#F5C866', '#7BC1CC', '#AAD4F4', '#E8B1C4', '#E6BBD1'],
+                    hover: ['#5A35A3', '#5A7047', '#004F7A', '#221A5A', '#8B2429', '#B8750A', '#0E5A68', '#3A7BA3', '#8A5277', '#704D6B'],
+                    selected: ['#432A7A', '#455944', '#003A5C', '#1A1444', '#661B1E', '#8A5907', '#0A4751', '#2C5C7A', '#673D5A', '#523A50']
+                }
+            },
+            'cobalt-spectrum': {
+                standard: ['#005EB8', '#FF728A', '#00AA62', '#F05B00', '#53AFFF', '#FF4876', '#3300B2', '#E6AF2D', '#7423E2', '#777777'],
+                standardDark: ['#3381D1', '#FF8FA7', '#33C585', '#FF7E33', '#70C2FF', '#FF6B8F', '#5533CF', '#F2C250', '#9140FF', '#949494'],
+                light: ['#66A1E6', '#FFB5C5', '#66C591', '#FF9F66', '#A8D1FF', '#FFB5C5', '#8866D4', '#F5D18A', '#B388F0', '#BBBBBB'],
+                lightDark: ['#004785', '#B3516B', '#007A4A', '#B04000', '#3E7FBF', '#8B2429', '#2200789', '#A0781F', '#5B1CAF', '#525252'],
+                funnel: {
+                    continued: ['#005EB8', '#FF728A', '#00AA62', '#F05B00', '#53AFFF', '#FF4876', '#3300B2', '#E6AF2D', '#7423E2', '#777777'],
+                    dropped: ['#66A1E6', '#FFB5C5', '#66C591', '#FF9F66', '#A8D1FF', '#FFB5C5', '#8866D4', '#F5D18A', '#B388F0', '#BBBBBB'],
+                    hover: ['#004785', '#B3516B', '#007A4A', '#B04000', '#3E7FBF', '#8B2429', '#2200789', '#A0781F', '#5B1CAF', '#525252'],
+                    selected: ['#003661', '#8A3E52', '#005C38', '#803000', '#2E5F8F', '#661B1E', '#1A005C', '#785B17', '#44138A', '#3E3E3E']
+                }
+            },
+            'indigo-amber-spectrum': {
+                standard: ['#636EFA', '#E69F00', '#0072B2', '#FF4876', '#87A96B', '#332288', '#56B4E9', '#117733', '#CC79A7', '#AA4499'],
+                standardDark: ['#808BFF', '#F2B233', '#1F8FCF', '#FF6B8F', '#A4C088', '#4A3FA5', '#73C8F6', '#2E9450', '#E196C4', '#C166B6'],
+                light: ['#A5AFFC', '#F5C866', '#66B5E6', '#FFB5C5', '#B8CBA0', '#7F7FBB', '#AAD4F4', '#7FBB7F', '#E8B1C4', '#E6BBD1'],
+                lightDark: ['#4A58C8', '#B8750A', '#004F7A', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#0D4F26', '#8A5277', '#704D6B'],
+                funnel: {
+                    continued: ['#636EFA', '#E69F00', '#0072B2', '#FF4876', '#87A96B', '#332288', '#56B4E9', '#117733', '#CC79A7', '#AA4499'],
+                    dropped: ['#A5AFFC', '#F5C866', '#66B5E6', '#FFB5C5', '#B8CBA0', '#7F7FBB', '#AAD4F4', '#7FBB7F', '#E8B1C4', '#E6BBD1'],
+                    hover: ['#4A58C8', '#B8750A', '#004F7A', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#0D4F26', '#8A5277', '#704D6B'],
+                    selected: ['#384496', '#8A5907', '#003A5C', '#661B1E', '#455944', '#1A1444', '#2C5C7A', '#0A3A1D', '#673D5A', '#523A50']
+                }
+            },
+            'navy-sage-spectrum': {
+                standard: ['#0072B2', '#FF4876', '#87A96B', '#332288', '#56B4E9', '#CC79A7', '#117733', '#E69F00', '#AA4499', '#7A7F87'],
+                standardDark: ['#1F8FCF', '#FF6B8F', '#A4C088', '#4A3FA5', '#73C8F6', '#E196C4', '#2E9450', '#F2B233', '#C166B6', '#9BA3AB'],
+                light: ['#66B5E6', '#FFB5C5', '#B8CBA0', '#7F7FBB', '#AAD4F4', '#E8B1C4', '#7FBB7F', '#F5C866', '#E6BBD1', '#C4C7CD'],
+                lightDark: ['#004F7A', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#8A5277', '#0D4F26', '#B8750A', '#704D6B', '#5C6068'],
+                funnel: {
+                    continued: ['#0072B2', '#FF4876', '#87A96B', '#332288', '#56B4E9', '#CC79A7', '#117733', '#E69F00', '#AA4499', '#7A7F87'],
+                    dropped: ['#66B5E6', '#FFB5C5', '#B8CBA0', '#7F7FBB', '#AAD4F4', '#E8B1C4', '#7FBB7F', '#F5C866', '#E6BBD1', '#C4C7CD'],
+                    hover: ['#004F7A', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#8A5277', '#0D4F26', '#B8750A', '#704D6B', '#5C6068'],
+                    selected: ['#003A5C', '#661B1E', '#455944', '#1A1444', '#2C5C7A', '#673D5A', '#0A3A1D', '#8A5907', '#523A50', '#464B52']
                 }
             }
         };
@@ -85,8 +145,12 @@ class ChartColorTester {
         this.setupPresetButtons();
         this.setupItemsDropdown();
         this.setupShapesToggle();
+        this.setupDarkModeToggle();
         this.setupModalHandlers();
         this.setupOtherButtons();
+        
+        // Initialize theme from localStorage or default to light
+        this.initializeTheme();
         
         // Apply default preset to ensure proper initial colors
         this.applyPreset('default');
@@ -139,6 +203,126 @@ class ChartColorTester {
         }
     }
 
+    setupDarkModeToggle() {
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('change', (e) => {
+                const isDark = e.target.checked;
+                this.setTheme(isDark ? 'dark' : 'light');
+            });
+        }
+    }
+
+    initializeTheme() {
+        // Check localStorage for saved theme preference
+        const savedTheme = localStorage.getItem('chartTester-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Use saved theme, or fall back to system preference, or default to light
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        
+        // Set the theme without saving to localStorage (since it might be system preference)
+        this.setTheme(theme, savedTheme === null);
+        
+        // Update the toggle to match current theme
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            darkModeToggle.checked = theme === 'dark';
+        }
+    }
+
+    setTheme(theme, skipStorage = false) {
+        // Update the document's data-theme attribute
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        // Save to localStorage unless explicitly skipped
+        if (!skipStorage) {
+            localStorage.setItem('chartTester-theme', theme);
+        }
+        
+        // Update charts if they exist (for better dark mode support)
+        if (Object.keys(this.charts).length > 0) {
+            this.updateChartsForTheme(theme);
+        }
+    }
+
+    getChartThemeConfig() {
+        // Get current theme from document
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const gridLineColor = isDark ? '#4A4C55' : '#DADCE5';
+        const axisLineColor = isDark ? 'transparent' : '#DADCE5';
+        
+        return {
+            chart: {
+                backgroundColor: 'transparent',
+                plotBorderWidth: 0,
+                borderWidth: 0
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: 'var(--text-secondary)'
+                    }
+                },
+                lineColor: axisLineColor,
+                tickColor: axisLineColor,
+                gridLineColor: gridLineColor
+            },
+            yAxis: {
+                title: {
+                    style: {
+                        color: 'var(--text-secondary)'
+                    }
+                },
+                labels: {
+                    style: {
+                        color: 'var(--text-secondary)'
+                    }
+                },
+                gridLineColor: gridLineColor,
+                lineColor: axisLineColor,
+                tickColor: axisLineColor
+            },
+            legend: {
+                itemStyle: {
+                    color: 'var(--text-primary)'
+                }
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0
+                },
+                column: {
+                    borderWidth: 0,
+                    borderColor: 'transparent'
+                },
+                bar: {
+                    borderWidth: 0,
+                    borderColor: 'transparent'
+                },
+                pie: {
+                    borderWidth: 0,
+                    borderColor: 'transparent'
+                },
+                area: {
+                    borderWidth: 0,
+                    borderColor: 'transparent'
+                },
+                line: {
+                    borderWidth: 0
+                }
+            }
+        };
+    }
+
+    updateChartsForTheme(theme) {
+        // Adjust colors for the new theme
+        this.adjustColorsForTheme();
+        
+        // Recreate charts with theme-aware styling
+        this.createCharts();
+    }
+
     updateItemsCount(itemsCount) {
         this.currentItemsCount = itemsCount;
         this.createCharts(); // Recreate all charts with new item count
@@ -150,8 +334,37 @@ class ChartColorTester {
 
         const preset = this.presets[presetName];
         this.currentPalette = JSON.parse(JSON.stringify(preset));
+        
+        // Store original colors for theme switching
+        this.originalStandardColors = [...preset.standard];
+        this.originalLightColors = [...preset.light];
+        
+        // Adjust colors based on theme
+        this.adjustColorsForTheme();
 
         this.updateAllCharts();
+    }
+
+    adjustColorsForTheme() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        if (isDark) {
+            // In dark mode, use predefined dark colors if available
+            if (this.currentPalette.standardDark) {
+                this.currentPalette.standard = [...this.currentPalette.standardDark];
+            }
+            if (this.currentPalette.lightDark) {
+                this.currentPalette.light = [...this.currentPalette.lightDark];
+            }
+        } else {
+            // In light mode, restore the original colors
+            if (this.originalStandardColors) {
+                this.currentPalette.standard = [...this.originalStandardColors];
+            }
+            if (this.originalLightColors) {
+                this.currentPalette.light = [...this.originalLightColors];
+            }
+        }
     }
 
 
@@ -222,23 +435,28 @@ class ChartColorTester {
             }
         ];
 
-        this.charts.lineChart = Highcharts.chart('lineChart', {
+        const chartConfig = {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'line',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'line'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Values'
                 }
             },
             legend: {
+                ...this.getChartThemeConfig().legend,
                 enabled: true
             },
             plotOptions: {
@@ -252,7 +470,9 @@ class ChartColorTester {
             credits: {
                 enabled: false
             }
-        });
+        };
+
+        this.charts.lineChart = Highcharts.chart('lineChart', chartConfig);
     }
 
     createBarChart() {
@@ -301,18 +521,22 @@ class ChartColorTester {
         ];
 
         this.charts.barChart = Highcharts.chart('barChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'column',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'column'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Q1', 'Q2', 'Q3', 'Q4']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Revenue'
                 }
             },
@@ -338,9 +562,10 @@ class ChartColorTester {
         ];
 
         this.charts.pieChart = Highcharts.chart('pieChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'pie',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'pie'
             },
             title: {
                 text: null
@@ -401,18 +626,22 @@ class ChartColorTester {
         ];
 
         this.charts.areaChart = Highcharts.chart('areaChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'area',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'area'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Values'
                 }
             },
@@ -466,18 +695,22 @@ class ChartColorTester {
         ];
 
         this.charts.lightChart = Highcharts.chart('lightChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'column',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'column'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Engagement'
                 }
             },
@@ -489,41 +722,62 @@ class ChartColorTester {
     }
 
     createMixedChart() {
+        // Create multiple series data that respond to items toggle
+        const barSeriesData = [
+            { name: 'Q1 Revenue', data: [45.2, 89.1, 62.3, 134.7, 98.5, 156.2, 89.4, 123.8, 67.9, 145.6], color: this.currentPalette.light[0] },
+            { name: 'Q2 Revenue', data: [67.8, 34.5, 178.9, 98.1, 145.3, 87.6, 201.2, 156.7, 89.3, 167.4], color: this.currentPalette.light[1] },
+            { name: 'Q3 Revenue', data: [123.4, 156.8, 89.2, 67.1, 189.5, 134.2, 78.9, 198.3, 145.7, 89.6], color: this.currentPalette.light[2] }
+        ];
+
+        const lineData = [78.5, 123.2, 145.8, 89.3, 167.4, 134.1, 156.7, 98.2, 189.3, 123.8];
+
+        // Adjust categories based on number of items
+        const categories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
+        const adjustedCategories = categories.slice(0, this.currentItemsCount * 2); // More data points than items
+
         this.charts.mixedChart = Highcharts.chart('mixedChart', {
-            chart: {
-                backgroundColor: 'transparent'
-            },
+            ...this.getChartThemeConfig(),
             title: {
                 text: null
             },
             xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+                ...this.getChartThemeConfig().xAxis,
+                categories: adjustedCategories
             },
             yAxis: [{
+                ...this.getChartThemeConfig().yAxis,
                 title: {
-                    text: 'Revenue'
+                    ...this.getChartThemeConfig().yAxis.title,
+                    text: 'Revenue ($K)'
                 }
             }, {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
-                    text: 'Users'
+                    ...this.getChartThemeConfig().yAxis.title,
+                    text: 'Target ($K)'
                 },
                 opposite: true
             }],
-            series: [{
-                name: 'Revenue',
-                type: 'column',
-                data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0],
-                color: this.currentPalette.light[1]
-            }, {
-                name: 'Users',
-                type: 'line',
-                yAxis: 1,
-                data: [24.9, 65.5, 89.4, 102.2, 134.0, 156.0],
-                color: this.currentPalette.standard[0],
-                marker: {
-                    enabled: this.showShapes
+            series: [
+                // Add bar series based on current items count
+                ...barSeriesData.slice(0, this.currentItemsCount).map(series => ({
+                    ...series,
+                    type: 'column',
+                    data: series.data.slice(0, adjustedCategories.length)
+                })),
+                // Add line series
+                {
+                    name: 'Target',
+                    type: 'line',
+                    yAxis: 1,
+                    data: lineData.slice(0, adjustedCategories.length),
+                    color: this.currentPalette.standard[0],
+                    marker: {
+                        enabled: this.showShapes
+                    },
+                    lineWidth: 3
                 }
-            }],
+            ],
             credits: {
                 enabled: false
             }
@@ -532,23 +786,29 @@ class ChartColorTester {
 
     createGoalChart() {
         this.charts.goalChart = Highcharts.chart('goalChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'line',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'line'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Q1', 'Q2', 'Q3', 'Q4']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Performance'
                 }
             },
             plotOptions: {
+                ...this.getChartThemeConfig().plotOptions,
                 line: {
+                    ...this.getChartThemeConfig().plotOptions.line,
                     marker: {
                         enabled: this.showShapes
                     }
@@ -614,18 +874,22 @@ class ChartColorTester {
         ];
 
         this.charts.peopleDWMChart = Highcharts.chart('peopleDWMChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'column',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'column'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Users'
                 }
             },
@@ -638,25 +902,31 @@ class ChartColorTester {
 
     createPESChart() {
         this.charts.pesChart = Highcharts.chart('pesChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'line',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'line'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'PES Score'
                 },
                 min: 0,
                 max: 100
             },
             plotOptions: {
+                ...this.getChartThemeConfig().plotOptions,
                 line: {
+                    ...this.getChartThemeConfig().plotOptions.line,
                     marker: {
                         enabled: this.showShapes,
                         radius: this.showShapes ? 5 : 0
@@ -713,26 +983,33 @@ class ChartColorTester {
         ];
 
         this.charts.userFrequencyChart = Highcharts.chart('userFrequencyChart', {
+            ...this.getChartThemeConfig(),
             chart: {
-                type: 'area',
-                backgroundColor: 'transparent'
+                ...this.getChartThemeConfig().chart,
+                type: 'area'
             },
             title: {
                 text: null
             },
             xAxis: {
+                ...this.getChartThemeConfig().xAxis,
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
             },
             yAxis: {
+                ...this.getChartThemeConfig().yAxis,
                 title: {
+                    ...this.getChartThemeConfig().yAxis.title,
                     text: 'Percentage'
                 },
                 labels: {
+                    ...this.getChartThemeConfig().yAxis.labels,
                     format: '{value}%'
                 }
             },
             plotOptions: {
+                ...this.getChartThemeConfig().plotOptions,
                 area: {
+                    ...this.getChartThemeConfig().plotOptions.area,
                     stacking: 'percent'
                 }
             },
@@ -953,6 +1230,24 @@ class ChartColorTester {
     }
 
 
+
+    desaturateColor(color, percent) {
+        const num = parseInt(color.slice(1), 16);
+        const R = (num >> 16);
+        const G = (num >> 8 & 0x00FF);
+        const B = (num & 0x0000FF);
+        
+        // Calculate grayscale value using luminance formula
+        const gray = Math.round(0.299 * R + 0.587 * G + 0.114 * B);
+        
+        // Blend each channel towards gray by the specified percentage
+        const factor = percent / 100;
+        const newR = Math.round(R + (gray - R) * factor);
+        const newG = Math.round(G + (gray - G) * factor);
+        const newB = Math.round(B + (gray - B) * factor);
+        
+        return "#" + (0x1000000 + newR * 0x10000 + newG * 0x100 + newB).toString(16).slice(1);
+    }
 
     darkenColor(color, percent) {
         const num = parseInt(color.slice(1), 16);

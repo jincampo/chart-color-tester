@@ -11,13 +11,20 @@
     --pendo-border-light: #EAECF1;
     --pendo-bg-gray: #FCFCFD;
     
-    /* Semantic Colors */
+    /* Light Theme (Default) */
     --primary-color: var(--pendo-pink);
     --text-primary: var(--pendo-gray-90);
     --text-secondary: var(--pendo-gray-70);
+    --text-muted: #8E909A;
     --bg-primary: var(--pendo-white);
-    --bg-secondary: var(--pendo-gray-10);
+    --bg-secondary: var(--pendo-white);
+    --bg-tertiary: #F1F2F4;
+    --bg-page: var(--pendo-gray-10);
+    --bg-page-header: var(--pendo-bg-gray);
     --border-color: var(--pendo-border);
+    --border-light: var(--pendo-border-light);
+    --chart-bg: transparent;
+    --modal-bg: rgba(0, 0, 0, 0.5);
     
     /* Spacing */
     --spacing-xs: 4px;
@@ -37,6 +44,29 @@
     /* Layout */
     --sidebar-width: 198px;
     --top-nav-height: 64px;
+    --border-radius: 6px;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    /* Dark Theme Color Overrides */
+    --text-primary: #E8E9EB;
+    --text-secondary: #B8BCC8;
+    --text-muted: #9CA0AB;
+    --bg-primary: #22232B;
+    --bg-secondary: #22232B;
+    --bg-tertiary: #2F3349;
+    --bg-page: #1C1D23;
+    --bg-page-header: #1C1D23;
+    --border-color: #2A2D35;
+    --border-light: #2F3349;
+    --chart-bg: transparent;
+    --modal-bg: rgba(0, 0, 0, 0.7);
+    
+    /* Dark Theme Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -56,7 +86,7 @@ body {
 /* App Layout */
 .pendo-app {
     height: 100vh;
-    background: var(--bg-secondary);
+    background: var(--bg-page);
 }
 
 /* Top Navigation */
@@ -342,7 +372,7 @@ body {
 }
 
 .page-header {
-    background: var(--pendo-bg-gray);
+    background: var(--bg-page-header);
     padding: var(--spacing-lg) var(--spacing-xl);
     border-bottom: 1px solid var(--border-color);
     display: flex;
@@ -375,7 +405,7 @@ body {
     min-width: 150px;
 }
 
-.shapes-toggle {
+.shapes-toggle, .theme-toggle {
     display: flex;
     align-items: center;
 }
@@ -422,7 +452,7 @@ body {
 
 /* Chart Sections */
 .charts-section {
-    background: var(--bg-primary);
+    background: var(--bg-page);
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
     margin-bottom: var(--spacing-xl);
@@ -821,7 +851,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--modal-bg);
     backdrop-filter: blur(4px);
 }
 
