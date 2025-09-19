@@ -135,6 +135,18 @@ class ChartColorTester {
                     hover: ['#004F7A', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#8A5277', '#0D4F26', '#B8750A', '#704D6B', '#5C6068'],
                     selected: ['#003A5C', '#661B1E', '#455944', '#1A1444', '#2C5C7A', '#673D5A', '#0A3A1D', '#8A5907', '#523A50', '#464B52']
                 }
+            },
+            'cobalt-sage-spectrum': {
+                standard: ['#005EB8', '#FF4876', '#87A96B', '#332288', '#56B4E9', '#CC79A7', '#117733', '#E69F00', '#AA4499', '#7A7F87'],
+                standardDark: ['#2F81D1', '#FF6B8F', '#A4C088', '#4A3FA5', '#73C8F6', '#E196C4', '#2E9450', '#F2B233', '#C166B6', '#9BA3AB'],
+                light: ['#66A1E6', '#FFB5C5', '#B8CBA0', '#7F7FBB', '#AAD4F4', '#E8B1C4', '#7FBB7F', '#F5C866', '#E6BBD1', '#C4C7CD'],
+                lightDark: ['#004685', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#8A5277', '#0D4F26', '#B8750A', '#704D6B', '#5C6068'],
+                funnel: {
+                    continued: ['#005EB8', '#FF4876', '#87A96B', '#332288', '#56B4E9', '#CC79A7', '#117733', '#E69F00', '#AA4499', '#7A7F87'],
+                    dropped: ['#66A1E6', '#FFB5C5', '#B8CBA0', '#7F7FBB', '#AAD4F4', '#E8B1C4', '#7FBB7F', '#F5C866', '#E6BBD1', '#C4C7CD'],
+                    hover: ['#004685', '#8B2429', '#5A7047', '#221A5A', '#3A7BA3', '#8A5277', '#0D4F26', '#B8750A', '#704D6B', '#5C6068'],
+                    selected: ['#003561', '#661B1E', '#455944', '#1A1444', '#2C5C7A', '#673D5A', '#0A3A1D', '#8A5907', '#523A50', '#464B52']
+                }
             }
         };
 
@@ -146,6 +158,7 @@ class ChartColorTester {
         this.setupItemsDropdown();
         this.setupShapesToggle();
         this.setupDarkModeToggle();
+        this.setupButtonColorToggle();
         this.setupModalHandlers();
         this.setupOtherButtons();
         
@@ -213,6 +226,16 @@ class ChartColorTester {
         }
     }
 
+    setupButtonColorToggle() {
+        const buttonColorToggle = document.getElementById('buttonColorToggle');
+        if (buttonColorToggle) {
+            buttonColorToggle.addEventListener('change', (e) => {
+                const isTeal = e.target.checked;
+                this.setButtonColor(isTeal ? 'teal' : 'neutral');
+            });
+        }
+    }
+
     initializeTheme() {
         // Check localStorage for saved theme preference
         const savedTheme = localStorage.getItem('chartTester-theme');
@@ -228,6 +251,37 @@ class ChartColorTester {
         const darkModeToggle = document.getElementById('darkModeToggle');
         if (darkModeToggle) {
             darkModeToggle.checked = theme === 'dark';
+        }
+
+        // Initialize button color preference
+        this.initializeButtonColor();
+    }
+
+    initializeButtonColor() {
+        const savedButtonColor = localStorage.getItem('chartTester-buttonColor');
+        const buttonColor = savedButtonColor || 'teal';
+        
+        this.setButtonColor(buttonColor, savedButtonColor === null);
+        
+        // Set the toggle state to match the button color preference
+        const buttonColorToggle = document.getElementById('buttonColorToggle');
+        if (buttonColorToggle) {
+            buttonColorToggle.checked = buttonColor === 'teal';
+        }
+    }
+
+    setButtonColor(color, skipStorage = false) {
+        const helpBtn = document.getElementById('helpBtn');
+        if (helpBtn) {
+            if (color === 'neutral') {
+                helpBtn.classList.add('neutral');
+            } else {
+                helpBtn.classList.remove('neutral');
+            }
+        }
+        
+        if (!skipStorage) {
+            localStorage.setItem('chartTester-buttonColor', color);
         }
     }
 

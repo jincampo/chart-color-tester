@@ -445,6 +445,64 @@ body {
     border-color: var(--primary-color);
 }
 
+.btn-figma-style {
+    background: #128297;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 14.222px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    line-height: 1.5;
+    transition: background-color 0.2s ease;
+}
+
+.btn-figma-style:hover {
+    background: #0f6e7f;
+}
+
+.btn-figma-style svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+/* Dark mode styling for Figma button */
+[data-theme="dark"] .btn-figma-style {
+    background: #5AB7CF;
+    color: #1C1D23;
+}
+
+[data-theme="dark"] .btn-figma-style:hover {
+    background: #4DA6BD;
+    color: #1C1D23;
+}
+
+/* Neutral button styling */
+.btn-figma-style.neutral {
+    background: #3A3C45;
+}
+
+.btn-figma-style.neutral:hover {
+    background: #2F3138;
+}
+
+[data-theme="dark"] .btn-figma-style.neutral {
+    background: #EAECF1;
+    color: #1C1D23;
+}
+
+[data-theme="dark"] .btn-figma-style.neutral:hover {
+    background: #D6D9E0;
+    color: #1C1D23;
+}
+
 .page-content {
     flex: 1;
     overflow-y: auto;
