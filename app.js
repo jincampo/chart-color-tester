@@ -3,6 +3,7 @@ class ChartColorTester {
     constructor() {
         this.charts = {};
         this.currentItemsCount = 3; // Default to 3 items per chart
+        this.showShapes = true; // Default to showing shapes on line charts
         this.currentPalette = {
             standard: ['#2C8AA8', '#FF4876', '#00AA62', '#6A6C75', '#EFBE53', '#9B59B6', '#E67E22', '#1ABC9C', '#3498DB', '#F39C12'],
             light: ['#A8D8EA', '#FFB3C6', '#B3E5D1', '#D4D6DD', '#F7E7A3', '#D7BDE2', '#F8C471', '#A3E4D7', '#AED6F1', '#F8C471'],
@@ -83,6 +84,7 @@ class ChartColorTester {
     init() {
         this.setupPresetButtons();
         this.setupItemsDropdown();
+        this.setupShapesToggle();
         this.setupModalHandlers();
         this.setupOtherButtons();
         
@@ -126,10 +128,22 @@ class ChartColorTester {
         }
     }
 
+    setupShapesToggle() {
+        const shapesToggle = document.getElementById('shapesToggle');
+        if (shapesToggle) {
+            shapesToggle.addEventListener('change', (e) => {
+                this.showShapes = e.target.checked;
+                // Recreate charts to ensure marker settings are applied correctly
+                this.createCharts();
+            });
+        }
+    }
+
     updateItemsCount(itemsCount) {
         this.currentItemsCount = itemsCount;
         this.createCharts(); // Recreate all charts with new item count
     }
+
 
     applyPreset(presetName) {
         if (!this.presets[presetName]) return;
@@ -226,6 +240,13 @@ class ChartColorTester {
             },
             legend: {
                 enabled: true
+            },
+            plotOptions: {
+                line: {
+                    marker: {
+                        enabled: this.showShapes
+                    }
+                }
             },
             series: seriesData.slice(0, this.currentItemsCount),
             credits: {
@@ -498,7 +519,10 @@ class ChartColorTester {
                 type: 'line',
                 yAxis: 1,
                 data: [24.9, 65.5, 89.4, 102.2, 134.0, 156.0],
-                color: this.currentPalette.standard[0]
+                color: this.currentPalette.standard[0],
+                marker: {
+                    enabled: this.showShapes
+                }
             }],
             credits: {
                 enabled: false
@@ -521,6 +545,13 @@ class ChartColorTester {
             yAxis: {
                 title: {
                     text: 'Performance'
+                }
+            },
+            plotOptions: {
+                line: {
+                    marker: {
+                        enabled: this.showShapes
+                    }
                 }
             },
             series: [{
@@ -624,14 +655,19 @@ class ChartColorTester {
                 min: 0,
                 max: 100
             },
+            plotOptions: {
+                line: {
+                    marker: {
+                        enabled: this.showShapes,
+                        radius: this.showShapes ? 5 : 0
+                    }
+                }
+            },
             series: [{
                 name: 'Product Engagement Score',
                 data: [65, 68, 72, 69, 75, 78],
                 color: this.currentPalette.standard[0],
-                lineWidth: 3,
-                marker: {
-                    radius: 5
-                }
+                lineWidth: 3
             }],
             credits: {
                 enabled: false
