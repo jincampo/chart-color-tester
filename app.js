@@ -25,18 +25,8 @@ class ChartColorTester {
                     selected: ['#390E7C', '#5A0D59', '#083D4E', '#16321C', '#713E00', '#081C54', '#713E00', '#5A0D59', '#081C54', '#390E7C']
                 }
             },
-            'new-proposal-1': {
-                standard: ['#094B7C', '#FF728A', '#53AFFF', '#F05B00', '#DBA211', '#00AA62', '#3300B2', '#FF4876', '#7423E2', '#9A9CA5'],
-                light: ['#7BA5C7', '#FFB5C5', '#A8D1FF', '#FF9F66', '#F5D18A', '#66C591', '#8866D4', '#FFB5C5', '#B388F0', '#C5C7CC'],
-                funnel: {
-                    continued: ['#094B7C', '#FF728A', '#53AFFF', '#F05B00', '#EFBE53', '#00AA62', '#3300B2', '#FF4876', '#7423E2', '#9A9CA5'],
-                    dropped: ['#7BA5C7', '#FFB5C5', '#A8D1FF', '#FF9F66', '#F5D18A', '#66C591', '#8866D4', '#FFB5C5', '#B388F0', '#C5C7CC'],
-                    hover: ['#073A63', '#CC5B6E', '#428CCC', '#C04800', '#BC9542', '#00884E', '#2800B2', '#CC3A5E', '#5D1CE5', '#7B7D84'],
-                    selected: ['#052A4A', '#994452', '#316999', '#903600', '#8F7031', '#006639', '#1E0089', '#99293E', '#461AB8', '#5C5E63']
-                }
-            },
-            'new-proposal-2': {
-                standard: ['#FF4876', '#56B4E9', '#0072B2', '#117733', '#88CCEE', '#332288', '#AA4499', '#6699CC', '#CC79A7'],
+            'bright-blues-pinks': {
+                standard: ['#FF4876', '#0072B2', '#87A96B', '#332288', '#56B4E9', '#117733', '#CC79A7', '#88CCEE', '#AA4499'],
                 light: ['#FFB5C5', '#AAD4F4', '#66B5E6', '#7FBB7F', '#BBE2F7', '#7F7FBB', '#CC99BB', '#99BBE6', '#E6BBD1'],
                 funnel: {
                     continued: ['#FF4876', '#56B4E9', '#0072B2', '#117733', '#88CCEE', '#332288', '#AA4499', '#6699CC', '#CC79A7'],
@@ -45,7 +35,7 @@ class ChartColorTester {
                     selected: ['#992D46', '#346E8B', '#00446C', '#0A4720', '#4F7A8C', '#1E1B50', '#66295B', '#3E5C77', '#7A4863']
                 }
             },
-            mollys: {
+            'vibrant-purples': {
                 standard: ['#8852DC', '#982595', '#4AB0D0', '#417D4D', '#F59929', '#4570E0', '#D77A0A', '#CA58C7', '#7494E8', '#6825D1'],
                 light: ['#C3A6F1', '#D1A2D5', '#A5D8EC', '#90C09D', '#FDD08A', '#A2B8F0', '#F1B866', '#E8A6E3', '#B4CAF4', '#B089E8'],
                 funnel: {
@@ -55,14 +45,14 @@ class ChartColorTester {
                     selected: ['#432A7A', '#521554', '#266B7F', '#234429', '#8D5315', '#213C7E', '#754206', '#6B3C71', '#415488', '#371475']
                 }
             },
-            'warm-cool-contrast': {
-                standard: ['#005B94', '#D9A600', '#5000A5', '#FF6100', '#00C47A', '#FF477E', '#4CC3FF', '#8A2BE2', '#FF6F91', '#9E9E9E'],
-                light: ['#66A3C7', '#F2D266', '#8066C7', '#FF9166', '#66D8A3', '#FF8DA3', '#8DD8FF', '#B366E8', '#FFA3B8', '#C4C4C4'],
+            'navy-bright-spectrum': {
+                standard: ['#094B7C', '#FF728A', '#53AFFF', '#F05B00', '#00AA62', '#3300B2', '#FF4876', '#7423E2', '#E6AF2D', '#777777'],
+                light: ['#7BA5C7', '#FFB5C5', '#A8D1FF', '#FF9F66', '#66C591', '#8866D4', '#FFB5C5', '#B388F0', '#F5D18A', '#BBBBBB'],
                 funnel: {
-                    continued: ['#005B94', '#D9A600', '#5000A5', '#FF6100', '#00C47A', '#FF477E', '#4CC3FF', '#8A2BE2', '#FF6F91', '#9E9E9E'],
-                    dropped: ['#66A3C7', '#F2D266', '#8066C7', '#FF9166', '#66D8A3', '#FF8DA3', '#8DD8FF', '#B366E8', '#FFA3B8', '#C4C4C4'],
-                    hover: ['#003D63', '#A68500', '#35006E', '#CC4D00', '#009959', '#CC2E5A', '#1A9CCC', '#5F1C9F', '#CC4A6E', '#6B6B6B'],
-                    selected: ['#002442', '#735900', '#1F003E', '#8A3400', '#006B3F', '#8A1E3C', '#0F6B8A', '#3D115F', '#8A2E46', '#4A4A4A']
+                    continued: ['#094B7C', '#FF728A', '#53AFFF', '#F05B00', '#00AA62', '#3300B2', '#FF4876', '#7423E2', '#E6AF2D', '#777777'],
+                    dropped: ['#7BA5C7', '#FFB5C5', '#A8D1FF', '#FF9F66', '#66C591', '#8866D4', '#FFB5C5', '#B388F0', '#F5D18A', '#BBBBBB'],
+                    hover: ['#073A63', '#CC5B6E', '#428CCC', '#C04800', '#00884E', '#2800B2', '#CC3A5E', '#5D1CE5', '#BC9542', '#5C5C5C'],
+                    selected: ['#052A4A', '#994452', '#316999', '#903600', '#006639', '#1E0089', '#99293E', '#461AB8', '#8F7031', '#414141']
                 }
             }
         };
@@ -482,7 +472,7 @@ class ChartColorTester {
                 name: 'Revenue',
                 type: 'column',
                 data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0],
-                color: this.currentPalette.light[0]
+                color: this.currentPalette.light[1]
             }, {
                 name: 'Users',
                 type: 'line',
@@ -852,7 +842,7 @@ class ChartColorTester {
         // Update mixed chart
         if (this.charts.mixedChart) {
             if (this.charts.mixedChart.series[0]) {
-                this.charts.mixedChart.series[0].update({ color: this.currentPalette.light[0] });
+                this.charts.mixedChart.series[0].update({ color: this.currentPalette.light[1] });
             }
             if (this.charts.mixedChart.series[1]) {
                 this.charts.mixedChart.series[1].update({ color: this.currentPalette.standard[0] });
