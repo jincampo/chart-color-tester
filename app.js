@@ -3,7 +3,7 @@ class ChartColorTester {
     constructor() {
         this.charts = {};
         this.currentItemsCount = 3; // Default to 3 items per chart
-        this.showShapes = true; // Default to showing shapes on line charts
+        this.showShapes = false; // Default to hiding shapes on line charts (toggle is hidden)
         this.currentPalette = {
             standard: ['#2C8AA8', '#FF4876', '#00AA62', '#6A6C75', '#EFBE53', '#9B59B6', '#E67E22', '#1ABC9C', '#3498DB', '#F39C12'],
             light: ['#A8D8EA', '#FFB3C6', '#B3E5D1', '#D4D6DD', '#F7E7A3', '#D7BDE2', '#F8C471', '#A3E4D7', '#AED6F1', '#F8C471'],
@@ -158,6 +158,30 @@ class ChartColorTester {
                     dropped: ['#A8BBFF', '#F366B8', '#7FC7C9', '#BFA6E3', '#66C963', '#7FBCF0', '#E49966', '#99BF66', '#D48BE3', '#DFBE66'],
                     hover: ['#4A5FBC', '#A6006A', '#1F7A7D', '#6C5591', '#0E790B', '#2C70A3', '#973C0C', '#415F14', '#854491', '#826900'],
                     selected: ['#38478F', '#7A004F', '#175C5E', '#51406E', '#0A5B08', '#21547A', '#712D09', '#31470F', '#63336E', '#624F00']
+                }
+            },
+            'material-spectrum': {
+                standard: ['#00B789', '#F57C00', '#0066CC', '#E91E63', '#9C27B0', '#FFB300', '#00897B', '#8E24AA', '#C21807', '#455A64'],
+                standardDark: ['#33C79E', '#F89A33', '#3385D6', '#ED4976', '#B855C4', '#FFBF33', '#33A598', '#A954BE', '#D44A3A', '#6B7C87'],
+                light: ['#66D7B8', '#FAB366', '#66A3E6', '#F27BA3', '#C866D4', '#FFD166', '#66BBA8', '#C587D4', '#E68A7A', '#9BAAB0'],
+                lightDark: ['#008A66', '#B85D00', '#004D99', '#AE1547', '#731D85', '#BF8600', '#00665C', '#681B7F', '#911205', '#33404A'],
+                funnel: {
+                    continued: ['#00B789', '#F57C00', '#0066CC', '#E91E63', '#9C27B0', '#FFB300', '#00897B', '#8E24AA', '#C21807', '#455A64'],
+                    dropped: ['#66D7B8', '#FAB366', '#66A3E6', '#F27BA3', '#C866D4', '#FFD166', '#66BBA8', '#C587D4', '#E68A7A', '#9BAAB0'],
+                    hover: ['#008A66', '#B85D00', '#004D99', '#AE1547', '#731D85', '#BF8600', '#00665C', '#681B7F', '#911205', '#33404A'],
+                    selected: ['#006B50', '#8A4600', '#003A73', '#851040', '#561563', '#8F6500', '#004D47', '#4E1460', '#6D0E04', '#263038']
+                }
+            },
+            'scientific-spectrum': {
+                standard: ['#4D5A61', '#8D45FF', '#FF4876', '#009E73', '#E69F00', '#56B4E9', '#005951', '#A0522D', '#C7A600', '#1C2A39'],
+                standardDark: ['#6A7981', '#A962FF', '#FF6B8F', '#33B896', '#F2B233', '#79C8F6', '#338074', '#C06F50', '#E0C333', '#394857'],
+                light: ['#9CAAB0', '#C8A3FF', '#FFB5C5', '#66C5A0', '#F5C866', '#AAD4F4', '#66A094', '#D1A38F', '#E8D966', '#586675'],
+                lightDark: ['#3A444A', '#6D35BF', '#8B2429', '#007552', '#B87600', '#3E85B0', '#004A43', '#7A3E22', '#9E8800', '#141D28'],
+                funnel: {
+                    continued: ['#4D5A61', '#8D45FF', '#FF4876', '#009E73', '#E69F00', '#56B4E9', '#005951', '#A0522D', '#C7A600', '#1C2A39'],
+                    dropped: ['#9CAAB0', '#C8A3FF', '#FFB5C5', '#66C5A0', '#F5C866', '#AAD4F4', '#66A094', '#D1A38F', '#E8D966', '#586675'],
+                    hover: ['#3A444A', '#6D35BF', '#8B2429', '#007552', '#B87600', '#3E85B0', '#004A43', '#7A3E22', '#9E8800', '#141D28'],
+                    selected: ['#2A3338', '#531EA9', '#661B1E', '#00563D', '#8A5700', '#2E6385', '#003B36', '#5D2F1A', '#786600', '#0F1520']
                 }
             }
         };
@@ -636,9 +660,19 @@ class ChartColorTester {
             title: {
                 text: null
             },
+            plotOptions: {
+                pie: {
+                    borderWidth: 4,
+                    borderColor: getComputedStyle(document.documentElement).getPropertyValue('--bg-page').trim() || '#F8F8F9',
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
             series: [{
                 name: 'Share',
-                data: pieData.slice(0, this.currentItemsCount)
+                data: pieData.slice(0, this.currentItemsCount),
+                innerSize: '50%'
             }],
             credits: {
                 enabled: false
@@ -837,7 +871,7 @@ class ChartColorTester {
                     type: 'line',
                     yAxis: 1,
                     data: lineData.slice(0, adjustedCategories.length),
-                    color: this.currentPalette.standard[0],
+                    color: this.currentPalette.standard[3], // Use standard palette for darker line color
                     marker: {
                         enabled: this.showShapes
                     },
@@ -1240,12 +1274,15 @@ class ChartColorTester {
 
         // Update mixed chart
         if (this.charts.mixedChart) {
-            if (this.charts.mixedChart.series[0]) {
-                this.charts.mixedChart.series[0].update({ color: this.currentPalette.light[1] });
-            }
-            if (this.charts.mixedChart.series[1]) {
-                this.charts.mixedChart.series[1].update({ color: this.currentPalette.standard[0] });
-            }
+            // Update all bar series to use light colors
+            this.charts.mixedChart.series.forEach((series, index) => {
+                if (series.type === 'column' && this.currentPalette.light[index]) {
+                    series.update({ color: this.currentPalette.light[index] });
+                } else if (series.type === 'line') {
+                    // Keep line chart with standard color for contrast
+                    series.update({ color: this.currentPalette.standard[3] });
+                }
+            });
         }
 
         // Update goal chart

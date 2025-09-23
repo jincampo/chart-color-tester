@@ -235,21 +235,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-xs);
+    gap: 4px;
     width: 100%;
-    background: var(--primary-color);
+    background: #3A3C45;
     color: white;
     border: none;
     border-radius: 3px;
-    padding: 8px 16px;
+    padding: 8px 12px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14.222px;
+    font-family: 'Inter', sans-serif;
     cursor: pointer;
     margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+    transition: background-color 0.2s ease;
 }
 
-.plus-icon {
-    font-size: 16px;
+.create-btn svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.create-btn:hover {
+    background: #2F3138;
+}
+
+/* Dark mode styles for create button */
+[data-theme="dark"] .create-btn {
+    background: #EAECF1;
+    color: #1C1D23;
+}
+
+[data-theme="dark"] .create-btn:hover {
+    background: #D6D9E0;
+    color: #1C1D23;
 }
 
 /* Navigation */
@@ -291,17 +311,17 @@ body {
 }
 
 .nav-item:hover {
-    background: rgba(58, 60, 69, 0.05);
+    background: rgba(58, 60, 69, 0.08);
 }
 
 .nav-item.active {
-    background: rgba(255, 72, 118, 0.1);
-    color: var(--primary-color);
+    background: rgba(58, 60, 69, 0.12);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
 .nav-item.active .nav-icon {
-    color: var(--primary-color);
+    color: var(--text-primary);
 }
 
 .nav-item.expandable {
@@ -482,6 +502,23 @@ body {
 [data-theme="dark"] .btn-figma-style:hover {
     background: #4DA6BD;
     color: #1C1D23;
+}
+
+/* Dark mode navigation styles */
+[data-theme="dark"] .nav-item:hover {
+    background: rgba(232, 233, 235, 0.08);
+}
+
+[data-theme="dark"] .nav-item.active {
+    background: rgba(232, 233, 235, 0.12);
+}
+
+/* Hide specific UI elements while keeping them in code */
+.section-header,
+.theme-toggle,
+.button-color-toggle,
+.shapes-toggle {
+    display: none !important;
 }
 
 /* Neutral button styling */
