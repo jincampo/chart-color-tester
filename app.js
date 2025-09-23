@@ -175,11 +175,11 @@ class ChartColorTester {
             'scientific-spectrum': {
                 standard: ['#4D5A61', '#FF4876', '#8D45FF', '#009E73', '#E69F00', '#56B4E9', '#005951', '#A0522D', '#C7A600', '#1C2A39'],
                 standardDark: ['#6A7981', '#FF6B8F', '#A962FF', '#33B896', '#F2B233', '#79C8F6', '#338074', '#C06F50', '#E0C333', '#394857'],
-                light: ['#9CAAB0', '#FFB5C5', '#C8A3FF', '#66C5A0', '#F5C866', '#AAD4F4', '#66A094', '#D1A38F', '#E8D966', '#586675'],
+                light: ['#B1BCC2', '#FFD4DF', '#DCBBFF', '#85D4BB', '#F7D685', '#C4E4F7', '#85B5AC', '#DEB8A8', '#EDE285', '#718A95'],
                 lightDark: ['#3A444A', '#8B2429', '#6D35BF', '#007552', '#B87600', '#3E85B0', '#004A43', '#7A3E22', '#9E8800', '#141D28'],
                 funnel: {
                     continued: ['#4D5A61', '#FF4876', '#8D45FF', '#009E73', '#E69F00', '#56B4E9', '#005951', '#A0522D', '#C7A600', '#1C2A39'],
-                    dropped: ['#9CAAB0', '#FFB5C5', '#C8A3FF', '#66C5A0', '#F5C866', '#AAD4F4', '#66A094', '#D1A38F', '#E8D966', '#586675'],
+                    dropped: ['#B1BCC2', '#FFD4DF', '#DCBBFF', '#85D4BB', '#F7D685', '#C4E4F7', '#85B5AC', '#DEB8A8', '#EDE285', '#718A95'],
                     hover: ['#3A444A', '#8B2429', '#6D35BF', '#007552', '#B87600', '#3E85B0', '#004A43', '#7A3E22', '#9E8800', '#141D28'],
                     selected: ['#2A3338', '#661B1E', '#531EA9', '#00563D', '#8A5700', '#2E6385', '#003B36', '#5D2F1A', '#786600', '#0F1520']
                 }
@@ -190,6 +190,7 @@ class ChartColorTester {
     }
 
     init() {
+        this.setupThemeHighlight();
         this.setupPresetButtons();
         this.setupItemsDropdown();
         this.setupShapesToggle();
@@ -219,7 +220,43 @@ class ChartColorTester {
         this.createCharts();
     }
 
-
+    setupThemeHighlight() {
+        // Show theme selector highlight on page load
+        const themeHighlight = document.getElementById('themeHighlight');
+        if (themeHighlight) {
+            // Initialize Lucide icons for the highlight
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Hide if user hovers over the highlight or palette selector
+            const paletteSelector = document.getElementById('paletteSelector');
+            const dismissHighlight = () => {
+                if (themeHighlight && !themeHighlight.classList.contains('fade-out')) {
+                    themeHighlight.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (themeHighlight.parentNode) {
+                            themeHighlight.parentNode.removeChild(themeHighlight);
+                        }
+                    }, 500);
+                }
+            };
+            
+            // Dismiss on hover over the entire palette selector area
+            if (paletteSelector) {
+                paletteSelector.addEventListener('mouseenter', dismissHighlight);
+            }
+            
+            // Also dismiss when hovering directly over the highlight
+            themeHighlight.addEventListener('mouseenter', dismissHighlight);
+            
+            // Also hide if user interacts with the palette dropdown
+            const paletteDropdown = document.getElementById('paletteDropdown');
+            if (paletteDropdown) {
+                paletteDropdown.addEventListener('change', dismissHighlight);
+            }
+        }
+    }
 
     setupPresetButtons() {
         const dropdown = document.getElementById('paletteDropdown');
