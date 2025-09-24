@@ -1442,19 +1442,35 @@ class ChartColorTester {
         const helpBtn = document.getElementById('helpBtn');
         const closeBtn = document.querySelector('.modal-close');
 
-        helpBtn.addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
+        if (helpBtn && modal) {
+            helpBtn.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+        }
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
+        if (closeBtn && modal) {
+            closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 modal.style.display = 'none';
-            }
-        });
+            });
+        }
+
+        if (modal) {
+            // Close when clicking outside the modal
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Close with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                }
+            });
+        }
     }
 
     setupOtherButtons() {
