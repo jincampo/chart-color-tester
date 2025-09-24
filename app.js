@@ -183,6 +183,30 @@ class ChartColorTester {
                     hover: ['#3A444A', '#8B2429', '#6D35BF', '#007552', '#B87600', '#3E85B0', '#004A43', '#7A3E22', '#9E8800', '#141D28'],
                     selected: ['#2A3338', '#661B1E', '#531EA9', '#00563D', '#8A5700', '#2E6385', '#003B36', '#5D2F1A', '#786600', '#0F1520']
                 }
+            },
+            'pastel-spectrum': {
+                standard: ['#6FB7E9', '#FF6961', '#66CDAA', '#FFB347', '#B39EB5', '#E78AC3', '#FFD84D', '#779ECB', '#CFCFC4', '#FF9EBB'],
+                standardDark: ['#8FC8EC', '#FF8A84', '#85D6C0', '#FFC56A', '#C7B5C8', '#EDA8D2', '#FFE070', '#94B5D8', '#DEDDD7', '#FFB8CC'],
+                light: ['#B5D4F0', '#FFB3AF', '#A3E3CC', '#FFD19A', '#D8CDE0', '#F2C4E0', '#FFEB9A', '#B3CDE5', '#E8E8DF', '#FFD1DD'],
+                lightDark: ['#5894BC', '#BF4A44', '#4DA085', '#BF8535', '#8A7B8D', '#B86EA0', '#CCB53A', '#5A7A9F', '#9F9F94', '#CC7B95'],
+                funnel: {
+                    continued: ['#6FB7E9', '#FF6961', '#66CDAA', '#FFB347', '#B39EB5', '#E78AC3', '#FFD84D', '#779ECB', '#CFCFC4', '#FF9EBB'],
+                    dropped: ['#B5D4F0', '#FFB3AF', '#A3E3CC', '#FFD19A', '#D8CDE0', '#F2C4E0', '#FFEB9A', '#B3CDE5', '#E8E8DF', '#FFD1DD'],
+                    hover: ['#5894BC', '#BF4A44', '#4DA085', '#BF8535', '#8A7B8D', '#B86EA0', '#CCB53A', '#5A7A9F', '#9F9F94', '#CC7B95'],
+                    selected: ['#4575A0', '#994037', '#3A7A66', '#995E28', '#6F626E', '#945480', '#A3961E', '#496380', '#7F7F76', '#A36278']
+                }
+            },
+            'nature-spectrum': {
+                standard: ['#47568C', '#6BAF9E', '#CC6C6C', '#E3CA6D', '#2E6E68', '#9B9B9B', '#E8B295', '#7E6FAF', '#6E9FCF', '#4E6B54'],
+                standardDark: ['#6A78A6', '#8BC5B8', '#D68989', '#E9D58A', '#4B8B85', '#B5B5B5', '#EBC5B2', '#9B8BC5', '#8BB5E2', '#6B8571'],
+                light: ['#8A9BC0', '#A8D5C8', '#DDA6A6', '#EFE0A7', '#6BA8A2', '#CFCFCF', '#F0D8C2', '#B8A8D5', '#A8C5E8', '#88A291'],
+                lightDark: ['#363F6C', '#528A7E', '#A55252', '#C4A853', '#225450', '#787878', '#C59578', '#644F8A', '#5680A2', '#3A5240'],
+                funnel: {
+                    continued: ['#47568C', '#6BAF9E', '#CC6C6C', '#E3CA6D', '#2E6E68', '#9B9B9B', '#E8B295', '#7E6FAF', '#6E9FCF', '#4E6B54'],
+                    dropped: ['#8A9BC0', '#A8D5C8', '#DDA6A6', '#EFE0A7', '#6BA8A2', '#CFCFCF', '#F0D8C2', '#B8A8D5', '#A8C5E8', '#88A291'],
+                    hover: ['#363F6C', '#528A7E', '#A55252', '#C4A853', '#225450', '#787878', '#C59578', '#644F8A', '#5680A2', '#3A5240'],
+                    selected: ['#28305A', '#3E6B5E', '#833E3E', '#9B853F', '#1A403C', '#5A5A5A', '#9E7459', '#4C3B6B', '#42607A', '#2A3E30']
+                }
             }
         };
 
